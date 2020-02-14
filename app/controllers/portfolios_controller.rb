@@ -1,6 +1,5 @@
 class PortfoliosController < ApplicationController
 
-
   def index
     @portfolio_items = Portfolio.all
   end
@@ -14,7 +13,9 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
+        format.html {
+          redirect_to portfolios_path, notice: 'Portfolio was successfully created.'
+         }
       else
         format.html { render :new }
       end
@@ -30,7 +31,10 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
+        format.html {
+          redirect_to portfolios_path,
+          notice: 'Portfolio was successfully updated.'
+        }
       else
         format.html { render :edit }
       end
@@ -38,8 +42,8 @@ class PortfoliosController < ApplicationController
   end
 
   private
-    def portfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :body)
-    end
 
+  def portfolio_params
+    params.require(:portfolio).permit(:title, :subtitle, :body)
+  end
 end
