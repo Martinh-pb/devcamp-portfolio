@@ -1,0 +1,17 @@
+<h1>Angular</h1>
+
+<% @angular_items.each do |angular| %>
+  <%= image_tag angular.main_image %>
+  <h2><%= angular.title %></h2>
+  <em><%= angular.subtitle %></em>
+  <p><%= angular.body %></p>
+
+<div>
+  <div><%= link_to 'Edit', edit_portfolio_path(angular) %></div>
+  <div><%= link_to 'Delete', portfolio_path(angular), method: :Delete, data: {confirm: 'Are you sure?'} %></div>
+</div>
+<% end %>
+
+<div>
+<%= link_to 'Create new', new_portfolio_path %>
+</div>
