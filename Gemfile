@@ -50,6 +50,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+gem 'bootstrap', '~> 4.4.1'
 gem 'devise', '~> 4.2'
 gem 'friendly_id', '~> 5.1.0'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
