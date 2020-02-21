@@ -15,4 +15,9 @@ module ApplicationHelper
       content_tag(:p, greeting, class: 'source-greeting')
     end
   end
+
+  def copyright_generator
+    CopyrightHelper::Renderer.copyright 'Martin Haisma',
+                                        'All rights reserved'
+  end
 end
