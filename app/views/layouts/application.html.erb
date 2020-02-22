@@ -4,13 +4,27 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Cover</h3>
+        <nav class="nav nav-masthead justify-content-center">
+           <a class="nav-link active" href="#">Home</a>
+           <a class="nav-link" href="#">Features</a>
+           <a class="nav-link" href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
@@ -20,8 +34,17 @@
 
     <%= yield %>
 
-    <%= copyright_generator %>
+      <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+
+      <%= copyright_generator %>
 
     <%= source_helper("application") %>
+    </div>
+  </footer>
+</div>
+
+
   </body>
 </html>
