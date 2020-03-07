@@ -3,8 +3,7 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
-  line-height: 1;
-  border-bottom: 1px solid #e5e5e5;
+  margin: 3rem 0 3rem 0;
 }
 
 .blog-header-logo {
@@ -28,6 +27,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
   }
 }
+
+.blog-nav {
+  background-color: #0a6cd6;
+}
+
+.nav-link,
+.nav-link:hover {
+  color:#FFF
+}
+
+
 
 .nav-scroller {
   position: relative;
