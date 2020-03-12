@@ -54,6 +54,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'devise', '~> 4.2'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'friendly_id', '~> 5.1.0'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'kaminari', '~> 1.2'
 gem 'petergate', '~> 1.7'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
